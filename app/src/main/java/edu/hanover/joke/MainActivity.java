@@ -1,9 +1,9 @@
 package edu.hanover.joke;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.content.Intent;
 
 public class MainActivity extends Activity {
 
@@ -13,7 +13,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
     }
 
-    public void onClick(View view){
+    public void onClick(View view) {
         Intent intent = new Intent(this, DelayedMessageService.class);
         intent.putExtra(DelayedMessageService.EXTRA_MESSAGE, getResources().getString(R.string.button_response));
         startService(intent);
